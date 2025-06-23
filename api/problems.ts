@@ -1,4 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
+import axios from 'axios';
 
 // Simple in-memory storage for Vercel deployment
 const storage = {
@@ -47,7 +48,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       const [, contestId, index] = match;
 
       // Fetch problem info from Codeforces
-      const axios = (await import('axios')).default;
       const response = await axios.get(`https://codeforces.com/api/contest.standings?contestId=${contestId}&from=1&count=1`);
       
       if (response.data.status !== 'OK') {

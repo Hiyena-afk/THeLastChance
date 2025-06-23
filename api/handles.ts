@@ -1,4 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
+import axios from 'axios';
 
 // Simple in-memory storage for Vercel deployment
 const storage = {
@@ -39,7 +40,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }
 
       // Fetch user info from Codeforces
-      const axios = (await import('axios')).default;
       const response = await axios.get(`https://codeforces.com/api/user.info?handles=${handle}`);
       
       if (response.data.status !== 'OK' || !response.data.result?.length) {

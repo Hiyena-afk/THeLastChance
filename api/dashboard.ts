@@ -1,4 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
+import axios from 'axios';
 
 // Simple in-memory storage for Vercel deployment
 const storage = {
@@ -34,7 +35,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     for (const handle of handles) {
       try {
         // Fetch submissions for this handle
-        const axios = (await import('axios')).default;
         const response = await axios.get(`https://codeforces.com/api/user.status?handle=${handle.handle}&from=1&count=1000`);
         
         let submissions = [];
