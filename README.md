@@ -11,42 +11,25 @@ A web application to track Codeforces problem-solving progress for multiple user
 
 ## Deployment to Vercel
 
-### Quick Setup (5 minutes)
+### 🚀 Quick Deploy (2 minutes)
 
-1. **Fork/Clone this repository**
+See [`QUICK_START.md`](QUICK_START.md) for the fastest deployment method.
 
-2. **Install Vercel CLI** (if not already installed):
-   ```bash
-   npm install -g vercel
-   ```
+### 📖 Detailed Tutorial
 
-3. **Deploy to Vercel** (choose one method):
-   
-   **Option A - Using the deploy script:**
-   ```bash
-   ./deploy.sh
-   ```
-   
-   **Option B - Manual deployment:**
-   ```bash
-   vercel --prod
-   ```
-   
-   Follow the prompts:
-   - Link to existing project? `N`
-   - Project name: `codeforces-dashboard` (or your preferred name)
-   - Directory: `./` (current directory)
-   - Override settings? `N`
+See [`VERCEL_DEPLOYMENT_TUTORIAL.md`](VERCEL_DEPLOYMENT_TUTORIAL.md) for step-by-step instructions with screenshots and troubleshooting.
 
-4. **That's it!** Your app will be live at the provided `.vercel.app` URL.
+### ⚡ One-Command Deploy
 
-### Alternative: Deploy via Vercel Dashboard
+```bash
+npm install -g vercel
+vercel --prod
+```
 
-1. Go to [vercel.com](https://vercel.com)
-2. Click "New Project"
-3. Import your GitHub repository
-4. Vercel will automatically detect the configuration
-5. Click "Deploy"
+**Alternative: Use GitHub + Vercel Dashboard**
+1. Push code to GitHub
+2. Go to [vercel.com](https://vercel.com) → New Project
+3. Import your repository → Deploy
 
 ### Environment Variables
 
