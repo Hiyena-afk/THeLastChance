@@ -1,0 +1,7 @@
+node_modules
+.git
+server
+client/node_modules
+.replit
+.env
+*.log
